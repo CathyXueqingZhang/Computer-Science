@@ -48,8 +48,8 @@ def mark_as_done(item): # this is the counterpart of mark_as_done(...) from home
     return redirect(url_for('show_list'))
 ```
 
-####Running the application
-```Python(type)
+#### Running the application
+```Python
 if __name__ == "__main__":
     app.run("0.0.0.0")
 ```
