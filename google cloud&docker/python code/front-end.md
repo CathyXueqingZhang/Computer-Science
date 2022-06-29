@@ -19,7 +19,7 @@ TODO_API_URL = "http://" + os.environ['TODO_API_IP'] + ":6000"
 ```
 Shows all item form old list. POST, Delete and mark as done function
 
-```
+```Python
 @app.route("/")
 def show_list(): # this is the counterpart of show_list() from homework 3
     resp = requests.get(TODO_API_URL+"/api/items")
