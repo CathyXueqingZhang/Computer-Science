@@ -1,4 +1,4 @@
-Package
+Package<br/>
 
 ```Python (type)
 from flask import Flask, render_template, redirect, g, request, url_for, jsonify, json
