@@ -1,14 +1,14 @@
 Package<br/>
 
-```Python (type)
+```Python
 from flask import Flask, render_template, redirect, g, request, url_for, jsonify, json
 import urllib
 import requests  # similar purpose to urllib.request, just more convenient
 import os
 ```
-leave the application front-end and overall structure unchanged, but connect with backend by using API URL
+<br/>leave the application front-end and overall structure unchanged, but connect with backend by using API URL
 
-```Python (type)
+```Python
 app = Flask(__name__)
 # make sure to replace localhost with the actual IP of the backend service after you deploy the backend service on Google Cloud
 # for example, like this: TODO_API_URL = "http://123.456.789.123:6000"
@@ -17,7 +17,7 @@ app = Flask(__name__)
 TODO_API_URL = "http://" + os.environ['TODO_API_IP'] + ":6000"
 #the IP will change in the cloud, os.environ will help to get correct IP
 ```
-Shows all item form old list. POST, Delete and mark as done function
+<br/> Shows all item form old list. POST, Delete and mark as done function
 
 ```Python
 @app.route("/")
@@ -48,7 +48,7 @@ def mark_as_done(item): # this is the counterpart of mark_as_done(...) from home
     return redirect(url_for('show_list'))
 ```
 
-Running the application
+####Running the application
 ```Python(type)
 if __name__ == "__main__":
     app.run("0.0.0.0")
