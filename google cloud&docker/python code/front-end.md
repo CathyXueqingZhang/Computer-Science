@@ -16,10 +16,10 @@ app = Flask(__name__)
 
 TODO_API_URL = "http://" + os.environ['TODO_API_IP'] + ":6000"
 #the IP will change in the cloud, os.environ will help to get correct IP
-
 ```
 Shows all item form old list. POST, Delete and mark as done function
-```Python(type)
+
+```
 @app.route("/")
 def show_list(): # this is the counterpart of show_list() from homework 3
     resp = requests.get(TODO_API_URL+"/api/items")
